@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import styled from "styled-components";
-import PostListItem from "./userListItem";
+import PostListItem from "./components/userListItem";
 import { useForm } from "react-hook-form";
 import Axios from "axios";
 import "./App.css";
-import GlobalStyle from "./globalStyles";
+import GlobalStyle from "./styles/globalStyles";
 
 const Wrapper = styled.div`
   display: flex;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaUserCircle } from "react-icons/fa";
-import theme from "./theme";
+import theme from "../styles/theme";
 
 const UserCard = styled.div`
   width: 300px;
