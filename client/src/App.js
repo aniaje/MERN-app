@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PostListItem from "./components/userListItem";
 import { useForm } from "react-hook-form";
 import Axios from "axios";
-import "./App.css";
+
 import GlobalStyle from "./styles/globalStyles";
 
 const Wrapper = styled.div`
@@ -47,7 +47,11 @@ function App() {
 
         <input type="email" {...register("username", { required: true })} />
 
-        <input type="number" {...register("experience", { required: true })} />
+        <input
+          type="number"
+          min="0"
+          {...register("experience", { required: true })}
+        />
 
         {errors.name ||
           errors.username ||

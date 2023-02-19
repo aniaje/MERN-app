@@ -7,9 +7,7 @@ mongoose.set("strictQuery", false);
 
 app.use(express.json());
 app.use(cors());
-mongoose.connect(
-  "mongodb+srv://ananhu7:passwordnhu7@cluster0.yhvohnw.mongodb.net/mern-app;"
-);
+mongoose.connect(process.env.MONGO_URL);
 
 app.get("/getUsers", (req, res) => {
   UserModel.find({}, (err, result) => {
